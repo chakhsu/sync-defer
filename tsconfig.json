@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "lib": ["ESNext", "ESNext.Promise"],
     "rootDir": "src",
     "types": ["node", "jest"],
     "moduleResolution": "node",
