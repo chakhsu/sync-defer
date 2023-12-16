@@ -1,4 +1,4 @@
-# SyncDefer ![build-status](https://github.com/chakhsu/sync-defer/actions/workflows/tests.yml/badge.svg) ![npm](https://img.shields.io/npm/v/sync-defer) ![license](https://img.shields.io/npm/l/sync-defer)
+# SyncDefer ![build-status](https://github.com/chakhsu/sync-defer/actions/workflows/ci.yml/badge.svg) ![npm](https://img.shields.io/npm/v/sync-defer) ![license](https://img.shields.io/npm/l/sync-defer)
 
 [English](./README.md) | [简体中文](./README_CN.md)
 
