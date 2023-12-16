@@ -9,10 +9,10 @@ export type Options = {
 export class SyncDefer {
   private cache: LRUCache<string, Deferred>
 
-  constructor(options: Options) {
+  constructor(options?: Options) {
     this.cache = new LRUCache({
-      ttl: options.ttl || 1000 * 60 * 5, // 5 min
-      max: options.max || 500
+      ttl: options?.ttl || 1000 * 60 * 5, // 5 min
+      max: options?.max || 500
     })
   }
 

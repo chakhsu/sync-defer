@@ -3,6 +3,11 @@ import { SyncDefer } from '../src'
 const options = { ttl: 500, max: 10 }
 
 describe('SyncDefer', () => {
+  test('new SyncDefer()', async () => {
+    const syncDefer = new SyncDefer()
+    expect(!!syncDefer).toBeTruthy()
+  })
+
   test('defer and sync methods', async () => {
     const key = 'testKey'
     const value = { test: 'value' }
