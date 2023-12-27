@@ -1,4 +1,4 @@
-import { Deferred } from './defered'
+import { Defered } from './defered'
 import { LRUCache } from 'lru-cache'
 
 export type Options = {
@@ -7,7 +7,7 @@ export type Options = {
 }
 
 export class SyncDefer {
-  private cache: LRUCache<string, Deferred>
+  private cache: LRUCache<string, Defered>
 
   constructor(options?: Options) {
     this.cache = new LRUCache({
@@ -17,18 +17,18 @@ export class SyncDefer {
   }
 
   public async sync(key: string, value: any, error?: any) {
-    const deferred = this.cache.get(key)
+    const defered = this.cache.get(key)
     if (error) {
       this.cache.delete(key)
-      return deferred?.reject(error)
+      return defered?.reject(error)
     }
-    return deferred?.resolve(value)
+    return defered?.resolve(value)
   }
 
   public async defer(key: string): Promise<any> {
-    const deferred = new Deferred()
-    this.cache.set(key, deferred)
-    const result: any = await deferred?.promise
+    const defered = new Defered()
+    this.cache.set(key, defered)
+    const result: any = await defered?.promise
     this.cache.delete(key)
     return result
   }
