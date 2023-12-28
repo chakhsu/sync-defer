@@ -68,6 +68,21 @@ Synchronize exceptional results:
 syncDefer.sync('id', null, new Error())
 ```
 
+### Defered
+
+```js
+// for commonjs
+const { Defered } = require('sync-defer')
+// for esm
+import { Defered } from 'sync-defer'
+
+const defered = new Defered()
+
+defered.resolve({ bool: true })
+defered.reject(new Error())
+const res = await defered.promise
+```
+
 ---
 
 You can check the [test code](./test/index.test.ts) for a complete usage example.

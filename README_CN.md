@@ -68,6 +68,21 @@ syncDefer.sync('id', { result: true })
 syncDefer.sync('id', null, new Error())
 ```
 
+### Defered
+
+```js
+// for commonjs
+const { Defered } = require('sync-defer')
+// for esm
+import { Defered } from 'sync-defer'
+
+const defered = new Defered()
+
+defered.resolve({ bool: true })
+defered.reject(new Error())
+const res = await defered.promise
+```
+
 ---
 
 完整的用法可以查看我们的[测试代码](./test/index.test.ts)。
