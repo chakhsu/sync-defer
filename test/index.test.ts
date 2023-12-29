@@ -1,26 +1,26 @@
-import { SyncDefer, SyncDeferOptions, Defered } from '../src'
+import { SyncDefer, SyncDeferOptions, Deferred } from '../src'
 
 const options: SyncDeferOptions = { ttl: 500, max: 10 }
 
 describe('SyncDefer', () => {
-  test('Defered resolve()', async () => {
-    const defered = new Defered()
+  test('Deferred resolve()', async () => {
+    const deferred = new Deferred()
 
     setTimeout(() => {
-      defered.resolve(true)
+      deferred.resolve(true)
     }, 1000)
 
-    const res = await defered.promise
+    const res = await deferred.promise
     expect(res).toBeTruthy()
   })
 
-  test('Defered reject()', async () => {
-    const defered = new Defered()
+  test('Deferred reject()', async () => {
+    const deferred = new Deferred()
     setTimeout(() => {
-      defered.resolve(false)
+      deferred.resolve(false)
     }, 1000)
 
-    const res = await defered.promise
+    const res = await deferred.promise
     expect(res).toBeFalsy()
   })
 

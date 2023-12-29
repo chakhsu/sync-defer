@@ -1,2 +1,2 @@
-export * from './defered'
+export * from './deferred'
 export * from './syncDefer'

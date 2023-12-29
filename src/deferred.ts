@@ -1,4 +1,4 @@
-export class Defered {
+export class Deferred {
   public promise: Promise<any>
   public resolve!: <T>(value: T | PromiseLike<T>) => void
   public reject!: (reason?: any) => void

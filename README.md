@@ -68,19 +68,19 @@ Synchronize exceptional results:
 syncDefer.sync('id', null, new Error())
 ```
 
-### Defered
+### Deferred
 
 ```js
 // for commonjs
-const { Defered } = require('sync-defer')
+const { Deferred } = require('sync-defer')
 // for esm
-import { Defered } from 'sync-defer'
+import { Deferred } from 'sync-defer'
 
-const defered = new Defered()
+const deferred = new Deferred()
 
-defered.resolve({ bool: true })
-defered.reject(new Error())
-const res = await defered.promise
+deferred.resolve({ bool: true })
+deferred.reject(new Error())
+const res = await deferred.promise
 ```
 
 ---
