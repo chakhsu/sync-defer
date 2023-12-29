@@ -1,6 +1,6 @@
 {
   "name": "sync-defer",
-  "version": "v1.3.0",
+  "version": "v1.3.1",
   "description": "A Node.js module for synchronous waiting execution proxy based on `LRUCache` and `Promise` to handle asynchronous processing across multiple services.",
   "author": "Chakhsu.Lau",
   "license": "MIT",
